@@ -1,0 +1,30 @@
+{
+  "name": "sdmp-create-identity",
+  "version": "0.2.0",
+  "description": "Create a valid SDMP identity container.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdmp/sdmp-create-identity.git"
+  },
+  "keywords": [
+    "sdmp"
+  ],
+  "author": "saibotsivad",
+  "license": "VOL",
+  "bugs": {
+    "url": "https://github.com/sdmp/sdmp-create-identity/issues"
+  },
+  "homepage": "https://github.com/sdmp/sdmp-create-identity#readme",
+  "dependencies": {
+    "moment": "2.11.2"
+  },
+  "devDependencies": {
+    "node-rsa": "0.3.2",
+    "sdmp-example-keys": "1.0.0",
+    "tape": "4.4.0"
+  }
+}
