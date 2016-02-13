@@ -13,6 +13,7 @@ test('generating an identity container with private key', function(t) {
 	t.equals(container.identity.type, 'user', 'should be the correct type')
 	t.ok(container.identity.expires, 'the expiration exists')
 	t.ok(container.identity.key, 'the key exists')
+	t.ok(container.identity.fingerprint, 'the fingerprint exists')
 
 	// make sure the key is valid
 	t.equals(typeof container.identity.key, 'string', 'key string should exist')
@@ -32,11 +33,15 @@ test('generating an identity container with public key', function(t) {
 	t.equals(container.identity.type, 'user', 'should be the correct type')
 	t.ok(container.identity.expires, 'the expiration exists')
 	t.ok(container.identity.key, 'the key exists')
+	t.ok(container.identity.fingerprint, 'the fingerprint exists')
 
 	// make sure the key is valid
 	t.equals(typeof container.identity.key, 'string', 'key string should exist')
 	var key = new NodeRSA(container.identity.key)
 	t.ok(key.isPublic(true), 'should be a public key')
+
+	// make sure the fingerprint is correct
+	t.equals(container.identity.fingerprint, exampleKeys.keyFingerprint, 'fingerprints should be identical')
 
 	t.end()
 })
