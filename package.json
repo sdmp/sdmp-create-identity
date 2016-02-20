@@ -21,6 +21,7 @@
   "homepage": "https://github.com/sdmp/sdmp-create-identity#readme",
   "dependencies": {
     "base64-url": "1.2.1",
+    "jssha": "2.0.2",
     "moment": "2.11.2"
   },
   "devDependencies": {
